@@ -1,0 +1,94 @@
+        :root {
+            --primary: #6366f1;
+            --success: #22c55e;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --card: #1e293b;
+            --gold: #fbbf24;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark);
+            color: #f8fafc;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: var(--card);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .header h1 { color: var(--gold); margin: 0; font-size: 1.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+
+        /* Progress Bar */
+        .progress-wrapper { margin: 20px 0; }
+        .bar-bg { background: #334155; height: 12px; border-radius: 10px; overflow: hidden; }
+        #progress-fill { background: linear-gradient(90deg, var(--gold), #f59e0b); height: 100%; width: 0%; transition: 0.8s; }
+
+        /* Grid */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .topic-btn {
+            background: #334155;
+            color: white;
+            border: 2px solid transparent;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .topic-btn.mastered { border-color: var(--success); background: rgba(34, 197, 94, 0.1); }
+
+        /* Quiz UI */
+        .option-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            background: #334155;
+            color: white;
+            border: 3px solid transparent;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+
+        /* Color States */
+        .correct-glow { border-color: var(--success) !important; background: rgba(34, 197, 94, 0.2) !important; }
+        .wrong-glow { border-color: var(--danger) !important; background: rgba(239, 68, 68, 0.2) !important; }
+
+        #explanation-box {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            border-left: 4px solid var(--gold);
+            display: none;
+        }
+
+        .next-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 15px;
+            display: none;
+            cursor: pointer;
+        }
+
+        .hidden { display: none; }
+        footer { margin-top: 25px; color: var(--gold); font-weight: bold; letter-spacing: 1px; }
